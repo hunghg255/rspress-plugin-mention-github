@@ -1,0 +1,63 @@
+{
+  "name": "rspress-plugin-mention-github",
+  "version": "0.0.1",
+  "description": "A plugin for rspress to record the last updated time of the doc.",
+  "bugs": "https://github.com/hunghg255/rspress-plugin-mention-github/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/rspress-plugin-mention-github",
+    "directory": "packages/plugin-last-updated"
+  },
+  "license": "MIT",
+  "type": "module",
+  "jsnext:source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/node/index.js",
+  "scripts": {
+    "dev": "modern build -w",
+    "build": "modern build",
+    "reset": "rimraf ./**/node_modules",
+    "lint": "modern lint",
+    "change": "modern change",
+    "bump": "modern bump",
+    "pre": "modern pre",
+    "change-status": "modern change-status",
+    "gen-release-note": "modern gen-release-note",
+    "release": "modern release",
+    "new": "modern new",
+    "test": "vitest run --passWithNoTests",
+    "upgrade": "modern upgrade"
+  },
+  "engines": {
+    "node": ">=14.17.6"
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
+  "devDependencies": {
+    "@modern-js/module-tools": "^2.52.0",
+    "@modern-js/tsconfig": "^2.52.0",
+    "@types/hast": "3.0.3",
+    "@types/node": "^18.19.34",
+    "react": "^18.3.1",
+    "typescript": "^5.4.5",
+    "unified": "10.1.2",
+    "vitest": "0.33.0"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.less",
+    "*.sass",
+    "*.scss"
+  ],
+  "files": [
+    "dist",
+    "style.css"
+  ],
+  "dependencies": {
+    "@rspress/shared": "^1.23.1",
+    "rspress-plugin-devkit": "^0.3.0"
+  }
+}
